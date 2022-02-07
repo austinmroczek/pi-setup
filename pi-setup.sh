@@ -3,7 +3,7 @@
 # setup SSH key
 mkdir ~pi/.ssh
 chmod 700 ~pi/.ssh
-echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAk5qQWUPKfPlZoskXAHD1Yl0iSOCfavAoGeCYmVzer1oBgSHsP8B6rgiujHqJWu0kJMKk1xMjUGj04X5bO6FAWqEdoggMlx2M0eb8hF2CQafSzlcWXj3Vi4YtVdv+nLZn+3BFXz0FdCgeXfDlvVbazI6BES2ByAB3tzgWIijz6eDEGwdQB/MjIvSlMtAIKaBCTSNzKLBEXpp7zXN2HJyfTR6YDGEqfKHHOkCTtFDfJyc7NMnw/NQhUKFyrUZnKFTVfWy06NaDXJ12pFWCCA0U3iBUS22shqVZdhYP7xnMgAX/wrwRBgD/SNnUabpqIv/0D1t/ymaYPYCGXq7DT48nJw== rsa-key-20190124" > ~pi/.ssh/authorized_keys
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCC7sdBOMlOHVHD2CWu7azNWMX3wtp0cpFMkS45A0PVZd8r9jgYaLOLHMuBmFZLJK4U186/xEhawk+By6WjqmMUwZGN/Qf14RAogUn/WQhCCSFCh4PNYcBiKwasW8rcL3xaD90bPH6/MTRCUKShXIHxSMzjUvNtxrLqnWkpebVTaFEVdLAZKq4yj7MdchEhQt/8aRZ3FLWSfvKJh53Ywi/ytgnBwLVqHd9EE3qBUcpGYGsunPWs8snpZ7KW7XRZpxTYD7u1dwog+YTS7zavHpuq1YmNhmIMbE+Kd+CfVtV6CNOvAHzpn4moNA7neJbTB2PgfJTOydg8JNCFSC51JH6H rsa-key-20210912" > ~pi/.ssh/authorized_keys
 chmod 700 ~pi/.ssh/authorized_keys
 chown -R pi:pi ~pi/.ssh
 
@@ -13,7 +13,7 @@ sed -n 'H;${x;s/\#PasswordAuthentication yes/PasswordAuthentication no/;p;}' /et
 cat tmp_sshd_config > /etc/ssh/sshd_config
 rm tmp_sshd_config
 
-# reload sshd so it the new config is active
+# reload sshd so the new config is active
 service ssh reload
 
 # get latest
