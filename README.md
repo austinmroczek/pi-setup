@@ -7,7 +7,7 @@ Download latest [Raspberry Pi OS](https://www.raspberrypi.org/software/operating
 
 Burn image to SD card
 
-Add a blank file `ssh.txt` to the boot partition from windows to enable SSH on boot
+Add a blank file `ssh.txt` to the boot partition from windows to enable SSH on boot (or use the new Raspberry Pi Imager tool and select that option)
 
 ## Set up USB mass storage boot
 
@@ -21,6 +21,10 @@ Use `raspi-config` to:
 - wireless LAN country
 - enable the serial line (for zwave)
 - expand the filesystem
+- enable serial port if needed
+
+## Disable bluetooth
+Add `dtoverlay=disable-bt` to /boot/config.txt and reboot
 
 ## Run the script
 
